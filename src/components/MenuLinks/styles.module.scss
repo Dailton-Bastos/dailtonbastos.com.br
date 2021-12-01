@@ -1,0 +1,24 @@
+.menuLinksWrapper {
+  margin: 3.2rem 0;
+}
+
+.menuLinksList {
+  font-size: 1.9rem;
+}
+
+.menuLinksItem {
+  padding: 0.8rem 0;
+
+  .active {
+    color: var(--color-white);
+  }
+
+  a {
+    color: var(--color-gray-500);
+    transition: color 0.2s ease 0s;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
