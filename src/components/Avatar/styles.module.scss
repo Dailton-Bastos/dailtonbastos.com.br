@@ -1,0 +1,10 @@
+.avatarWrapper {
+  margin: auto;
+  height: 10.4rem;
+  width: 10.4rem;
+  clip-path: circle(50% at 50% 50%);
+
+  img {
+    border-radius: 50%;
+  }
+}
