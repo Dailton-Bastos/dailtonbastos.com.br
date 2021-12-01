@@ -1,0 +1,22 @@
+.profileContainer {
+  padding-top: 2rem;
+}
+
+.profileAuthor {
+  color: var(--color-white);
+  font-family: 'Caveat';
+  font-size: 3.2rem;
+  margin: 0.8rem auto 2rem;
+}
+
+.profilePosition {
+  color: var(--color-gray-500);
+  font-family: 'Roboto';
+  font-size: 1.4rem;
+  display: block;
+}
+
+.authorDescription {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
