@@ -20,7 +20,7 @@ export const Profile = ({
   return (
     <section className={styles.profileContainer}>
       <Link href="/" passHref>
-        <a>
+        <a className={styles.profileLink}>
           <Avatar />
           <h1 className={styles.profileAuthor}>
             {title}
