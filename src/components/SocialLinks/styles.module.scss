@@ -1,0 +1,31 @@
+.socialLinksWrapper {
+  margin: 3.2rem auto 0;
+  width: 100%;
+}
+
+.socialLinksList {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+
+  a {
+    color: var(--color-gray-500);
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
+
+.iconWrapper {
+  fill: var(--color-gray-500);
+  height: 24px;
+  width: 24px;
+
+  &:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
+}
