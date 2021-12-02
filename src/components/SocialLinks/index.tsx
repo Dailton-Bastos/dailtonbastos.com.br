@@ -1,10 +1,14 @@
 import React from 'react'
 
+import { useMedia } from '~/hooks/useMedia'
+
 import { links } from './content'
 import { Icons } from './Icons'
 import styles from './styles.module.scss'
 
 export const SocialLinks = (): JSX.Element => {
+  const isMobile = useMedia('(max-width: 1024px)')
+
   return (
     <nav className={styles.socialLinksWrapper}>
       <ul className={styles.socialLinksList}>
@@ -20,7 +24,7 @@ export const SocialLinks = (): JSX.Element => {
                 rel="noopener noreferrer"
               >
                 <div className={styles.iconWrapper}>
-                  <Icon size={24} />
+                  <Icon size={isMobile ? 30 : 24} />
                 </div>
               </a>
             </li>

@@ -1,6 +1,13 @@
 .socialLinksWrapper {
-  margin: 3.2rem auto 0;
+  margin: 0 0 2rem;
+  order: 2;
   width: 100%;
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    order: initial;
+    margin: 3.2rem auto 0;
+  }
 }
 
 .socialLinksList {
@@ -20,8 +27,14 @@
 
 .iconWrapper {
   fill: var(--color-gray-500);
-  height: 24px;
-  width: 24px;
+  height: 30px;
+  width: 30px;
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    height: 24px;
+    width: 24px;
+  }
 
   &:hover {
     svg {

@@ -1,26 +1,57 @@
 .profileContainer {
+  flex-direction: column;
   padding-top: 2rem;
+
+  &.isMobile {
+    align-items: flex-start;
+    background: var(--color-gray-700);
+    border-bottom: 1px solid var(--color-gray-500);
+    display: flex;
+    flex-direction: row;
+    padding: 1.6rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+  }
 }
 
 .profileLink {
   color: var(--color-gray-500);
+  display: flex;
   transition: color 0.2s ease;
 
   &:hover {
     color: var(--color-white);
   }
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    display: block;
+  }
 }
 
 .profileAuthor {
-  font-family: 'Caveat';
-  font-size: 3.2rem;
-  margin: 0.8rem auto 2rem;
+  font-size: 1.8rem;
+  margin: 0 0 0 10px;
+
+  @media screen and (min-width: 1025px) {
+    font-family: 'Caveat';
+    //desktop and above
+    font-size: 3.2rem;
+    margin: 0.8rem auto 2rem;
+  }
 }
 
 .profilePosition {
-  font-family: 'Roboto';
-  font-size: 1.4rem;
   display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-top: 0.3rem;
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    font-family: 'Roboto';
+  }
 }
 
 .authorDescription {

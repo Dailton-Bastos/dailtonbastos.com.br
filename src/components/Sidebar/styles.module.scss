@@ -1,14 +1,27 @@
 .sidebarContainer {
-  align-items: center;
   background: var(--color-gray-700);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100% - 49px);
   position: fixed;
-  padding: 2rem;
   text-align: center;
-  width: 32rem;
+  transform: translateX(-100vw);
+  width: 100%;
+  transition: all 0.2s ease 0s;
   z-index: 2;
+
+  &.isOpen {
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    transform: none;
+    width: 32rem;
+  }
 }
 
 .menuLinksContainer {

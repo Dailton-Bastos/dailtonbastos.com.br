@@ -1,8 +1,14 @@
 .avatarWrapper {
   margin: auto;
-  height: 10.4rem;
-  width: 10.4rem;
+  height: 3.2rem;
+  width: 3.2rem;
   clip-path: circle(50% at 50% 50%);
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    height: 10.4rem;
+    width: 10.4rem;
+  }
 
   img {
     border-radius: 50%;

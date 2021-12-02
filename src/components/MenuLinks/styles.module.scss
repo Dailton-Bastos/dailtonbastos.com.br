@@ -1,13 +1,27 @@
 .menuLinksWrapper {
-  margin: 3.2rem 0;
+  margin: auto;
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    margin: 3.2rem 0;
+  }
 }
 
 .menuLinksList {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    font-size: 1.9rem;
+  }
 }
 
 .menuLinksItem {
-  padding: 0.8rem 0;
+  padding: 1.6rem 0;
+
+  @media screen and (min-width: 1025px) {
+    //desktop and above
+    padding: 0.8rem 0;
+  }
 
   .active {
     color: var(--color-white);

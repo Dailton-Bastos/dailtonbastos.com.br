@@ -8,6 +8,7 @@ interface ProfileProps {
   title: string
   position: string
   authorDescription: string
+  isMobileHeader: boolean
 }
 
 import styles from './styles.module.scss'
@@ -16,9 +17,14 @@ export const Profile = ({
   title,
   position,
   authorDescription,
+  isMobileHeader,
 }: ProfileProps): JSX.Element => {
   return (
-    <section className={styles.profileContainer}>
+    <section
+      className={`${styles.profileContainer} ${
+        isMobileHeader ? styles.isMobile : ''
+      }`}
+    >
       <Link href="/" passHref>
         <a className={styles.profileLink}>
           <Avatar />
@@ -28,7 +34,9 @@ export const Profile = ({
           </h1>
         </a>
       </Link>
-      <p className={styles.authorDescription}>{authorDescription}</p>
+      {!isMobileHeader && (
+        <p className={styles.authorDescription}>{authorDescription}</p>
+      )}
     </section>
   )
 }
