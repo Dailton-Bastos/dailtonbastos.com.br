@@ -9,6 +9,7 @@ import {
   BLOG_AUTHOR_DESCRIPTION,
 } from '~/lib/constants'
 
+import { MenuBar } from '../MenuBar'
 import styles from './styles.module.scss'
 
 interface LayoutProps {
@@ -17,6 +18,8 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   const isMobile = useMedia('(max-width: 1024px)')
+  const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false)
+
   return (
     <section className={styles.layoutWrapper}>
       {isMobile && (
@@ -27,8 +30,11 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
           isMobileHeader={true}
         />
       )}
-      <Sidebar />
+      <Sidebar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
       <main className={styles.layoutMain}>{children}</main>
+      {isMobile && (
+        <MenuBar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+      )}
     </section>
   )
 }

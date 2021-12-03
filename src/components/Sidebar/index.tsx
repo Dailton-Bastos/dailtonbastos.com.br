@@ -12,12 +12,21 @@ import {
 
 import styles from './styles.module.scss'
 
-export const Sidebar = (): JSX.Element => {
+interface SidebarProps {
+  setIsMenuOpen: (value: boolean) => void
+  isMenuOpen: boolean
+}
+
+export const Sidebar = ({ isMenuOpen }: SidebarProps): JSX.Element => {
   const isDesktop = useMedia('(min-width: 1025px)')
 
   return (
     <>
-      <aside className={`${styles.sidebarContainer}`}>
+      <aside
+        className={`${styles.sidebarContainer} ${
+          isMenuOpen ? styles.isOpen : ''
+        }`}
+      >
         {isDesktop && (
           <Profile
             title={BLOG_AUTHOR}
